@@ -1,0 +1,965 @@
+/* Background Image */
+.charsheet .sheet-background {
+    background-color: hsl(0, 0%, 95%);
+    background-size: 100%;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 840px;
+}
+
+/* Title Image */
+.charsheet .sheet-title-img {
+    width: 400px;
+    height: auto;
+}
+
+/* Header Input */
+.charsheet .sheet-header-input {
+    width: 100%;
+    color: #000000;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid hsl(0, 0%, 65%);
+    border-radius: 0px;
+    padding: 1px;
+}
+
+/* Grimoire Title */
+.charsheet .sheet-grimoire-title {
+    width: 100%;
+    color: white;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Header Input Adjusted for Abilities */
+.charsheet .sheet-abilities-adjust {
+    width: 79%;
+}
+
+/* Header Input Adjusted for Skills */
+.charsheet .sheet-skill-adjust {
+    text-align: center;
+}
+
+/* Header Label */
+.charsheet .sheet-header-label {
+    font-size: 0.75em;
+}
+
+/* Italic Adjust */
+.charsheet .sheet-text-italic {
+    font-style: italic;
+}
+
+/* Header Grid Setup */
+.charsheet .sheet-grid-container {
+  display: grid;
+  grid-gap: 5px;
+  background-color: transparent;
+  padding: 5px;
+}
+
+/* Grid Container Three ~ Emulating a 3 Column Layout */
+.charsheet .sheet-grid-container-three {
+    grid-template-columns: 33% auto auto;
+}
+
+/* Grid Container Two ~ Emulating a 2 Column Layout */
+.charsheet .sheet-grid-container-two {
+    grid-template-columns: 50% auto;
+}
+
+/* Grid Container Spells ~ Nine Columns */
+.charsheet .sheet-grid-container-spells {
+    grid-template-columns: auto auto auto auto auto auto auto 40px 20px;
+    text-align: center;
+}
+
+/* Grid Container Grimoire ~ Six Columns */
+.charsheet .sheet-grid-container-grimoire {
+    grid-template-columns: 10% auto auto auto auto 10%;
+    text-align: center;
+}
+
+.charsheet .sheet-grid-container-alpha {
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.charsheet .sheet-grid-container-beta {
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+}
+
+.charsheet .sheet-grid-container-gamma {
+    grid-template-columns: 29% auto auto auto auto auto auto 52px;
+}
+
+.charsheet .sheet-grid-container-delta {
+    grid-template-columns: 42% 13% 13% 13% 13%;
+    text-align: center;
+}
+
+.charsheet .sheet-grid-container-epsilon {
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+
+.charsheet .sheet-grid-container-eta {
+    grid-template-columns: 12% 6% 7% 7% 4% 7% 4% 7% 7% 5% 4% 4% 4% 4% 4% auto;
+    text-align: center;
+}
+
+.charsheet .sheet-grid-container-theta {
+    grid-template-columns: auto 15% 15% 10%;
+}
+
+.charsheet .sheet-grid-container-iota {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.charsheet .sheet-grid-container-kappa {
+    grid-template-columns: 15% 15% 15% 9% 8% 8% 8% 8% 8%;
+}
+
+.charsheet .sheet-grid-item {
+  background-color: rgba(259, 259, 259, 0.25);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: left;
+}
+
+.sheet-grid-item-center {
+    text-align: center;
+}
+
+/* GRID ALPHA */
+.charsheet .sheet-item1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.charsheet .sheet-item2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+.charsheet .sheet-item3 {
+  grid-column: 5 / 8;
+  grid-row: 1 / 4;
+}
+
+.charsheet .sheet-item4 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.charsheet .sheet-item5 {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+.charsheet .sheet-item6 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+.charsheet .sheet-item7 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.charsheet .sheet-item8 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+.charsheet .sheet-item9 {
+  grid-column: 1 / 8;
+  grid-row: 4 / 5;
+}
+
+.charsheet .sheet-item100, .sheet-item200 {
+  grid-column: 1 / 8;
+}
+
+.charsheet .sheet-item229, .sheet-item236, .sheet-item238 {
+  text-align: right;
+  font-size: 12px;
+}
+
+/* GRID BETA */
+.charsheet .sheet-grid-beta-item, .sheet-grid-theta-item {
+    text-align: center;
+}
+
+.charsheet .sheet-beta-item1, .sheet-beta-item35, .sheet-beta-item39 {
+  grid-column: 1 / 3;
+}
+
+.charsheet .sheet-beta-item401 {
+  grid-column: 1 / 6;
+}
+
+/* GRID GAMMA */
+.charsheet .sheet-grid-gamma-item {
+    text-align: center;
+}
+
+.charsheet .sheet-gamma-item9, .sheet-gamma-item19, .sheet-gamma-item61,
+.sheet-gamma-item103, .sheet-gamma-item145, .sheet-gamma-item187 {
+  grid-column: 1 / 8;
+  background: rgb(230, 230, 230);
+}
+
+.charsheet .sheet-gamma-item10, .sheet-gamma-item20, .sheet-gamma-item62,
+.sheet-gamma-item104, .sheet-gamma-item146, .sheet-gamma-item188, .sheet-delta-item8 {
+    background: rgb(230, 230, 230);
+}
+
+.charsheet .sheet-gamma-item11 {
+  min-width: 110px;
+}
+
+/* GRID SPELLS */
+.charsheet .sheet-spells-span-seven {
+    grid-column: 1 / 8;
+    background: rgb(230, 230, 230);
+}
+
+.sheet-spells-grey {
+    background: rgb(230, 230, 230);
+}
+
+.sheet-spells-span-four {
+    grid-column: 1 / 5;
+}
+
+.sheet-spells-span-five {
+    grid-column: 5 / 10;
+}
+
+/* GRID GRIMOIRE */
+.sheet-grimoire-span-six {
+    grid-column: 1 / 7;
+}
+
+.sheet-grimoire-span-left-two {
+    grid-column: 1 / 3;
+}
+
+.sheet-grimoire-span-center-two {
+    grid-column: 3 / 5;
+}
+
+.sheet-grimoire-span-right-two {
+    grid-column: 5 / 7;
+}
+
+/* GRID EPSILON */
+.charsheet .sheet-epsilon-item1, .sheet-epsilon-item16, .sheet-epsilon-item26,
+.sheet-epsilon-item29, .sheet-epsilon-item42, .sheet-epsilon-item49 {
+  grid-column: 1 / 4;
+}
+
+.charsheet .sheet-epsilon-item2, .sheet-epsilon-item21 {
+  grid-column: 4 / 10;
+}
+
+.charsheet .sheet-epsilon-item13, .sheet-epsilon-item23 {
+  grid-column: 2 / 4;
+}
+
+.charsheet .sheet-epsilon-item15, .sheet-epsilon-item18, {
+  grid-column: 5 / 10;
+}
+
+.charsheet .sheet-epsilon-item19, .sheet-epsilon-item36 {
+  grid-column: 1 / 3;
+}
+
+.charsheet .sheet-epsilon-item24, .sheet-epsilon-item27, .sheet-epsilon-item38 {
+  grid-column: 4 / 6;
+} 
+
+.charsheet .sheet-epsilon-item25, .sheet-epsilon-item28 {
+  grid-column: 6 / 10;
+} 
+
+.charsheet .sheet-epsilon-item40 {
+  grid-column: 7 / 9;
+}
+
+/* GRID ETA */
+.charsheet .sheet-grid-eta-item {
+    text-align: center;
+}
+
+.charsheet .sheet-eta-item33 {
+  grid-column: 1 / 17;
+} 
+
+.charsheet .sheet-eta-item34, .sheet-eta-item41 {
+  grid-column: 1 / 3;
+}
+
+.charsheet .sheet-eta-item35, .sheet-eta-item42 {
+  grid-column: 3 / 5;
+}
+
+.charsheet .sheet-eta-item36, .sheet-eta-item43 {
+  grid-column: 5 / 7;
+}
+
+.charsheet .sheet-eta-item37, .sheet-eta-item44 {
+  grid-column: 7 / 9;
+}
+
+.charsheet .sheet-eta-item38, .sheet-eta-item45 {
+  grid-column: 9 / 11;
+}
+
+.charsheet .sheet-eta-item39, .sheet-eta-item46 {
+  grid-column: 11 / 14;
+}
+
+.charsheet .sheet-eta-item40, .sheet-eta-item47 {
+  grid-column: 14 / 17;
+}
+
+.charsheet .sheet-eta-item49 {
+  grid-column: 2 / 17;
+}
+
+/* GRID THETA */
+.charsheet .sheet-theta-item9, .sheet-theta-item11, .sheet-theta-item13,
+.sheet-theta-item15, .sheet-theta-item17, .sheet-theta-item21, .sheet-theta-item23 {
+  grid-column: 1 / 4;
+}
+
+.charsheet .sheet-theta-item19, .sheet-theta-item20 {
+  grid-column: 1 / 5;
+}
+
+/* GRID IOTA */
+.charsheet .sheet-grid-iota-item {
+    display: inline;
+}
+
+.charsheet .sheet-iota-item1, .sheet-iota-item9, .sheet-iota-item10,
+.sheet-iota-item11, .sheet-iota-item17 {
+    grid-column: 1 / 6;
+}
+
+.charsheet .sheet-iota-item2 {
+    grid-column: 1 / 5;
+}
+
+/* GRID KAPPA */
+.charsheet .sheet-grid-kappa-item {
+    text-align: center;
+}
+
+/* Header Label */
+.charsheet .sheet-little-smaller {
+    font-size: 0.90em;
+}
+
+/* Fake Grid Container */
+.charsheet .sheet-fake-grid-container {
+  background-color: rgba(259, 259, 259, 0.25);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 5px;
+}
+
+.charsheet .sheet-fake-grid-input {
+    width: 36%;
+    color: #000000;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid hsl(0, 0%, 65%);
+    border-radius: 0px;
+    padding: 1px;
+}
+
+.charsheet .sheet-size-small {
+    width: 18%;
+}
+
+/* Sub Header Right */
+.charsheet .sheet-sub-header-right {
+  float: right;
+}
+
+/********** Tab Styling **********/
+div.sheet-tab-content {
+    display: none;
+}
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2,
+input.sheet-tab3:checked ~ div.sheet-tab3,
+input.sheet-tab4:checked ~ div.sheet-tab4 {
+    display: block;
+}
+
+.charsheet input.sheet-tab {
+    width: 24.5%;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: 0px;
+    margin: -1.5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.charsheet input.sheet-tab + span::before {
+    content: attr(title);
+    color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: black;
+    background: linear-gradient(to bottom, #000000, #808080);
+    width: 24.5%;
+    height: 20px;
+    font-size: 18px;
+    margin-left: -24.5%;
+    margin-right: 2px;
+    padding: 0px 0px 2px 0px;
+}
+
+.charsheet input.sheet-tab:checked + span::before {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: solid 1px #4d0000;
+    border-radius: 5px;
+}
+
+.charsheet input.sheet-tab:not(:first-child) + span::before {
+    border-left: 0px;
+}
+
+.charsheet div.sheet-tab-content {
+    margin: 1px;
+}
+
+/* Black Header */
+.charsheet .sheet-black-header {
+    color: white;
+    background: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.charsheet .sheet-black-header-text {
+    color: white;
+}
+
+/* Alpha Select */
+.charsheet .sheet-select-alpha {
+    height: 22px;
+    width: 49%;
+    color: #000000;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid hsl(0, 0%, 65%);
+    border-radius: 0px;
+    padding: 1px;
+    margin: 0px;
+}
+
+/* Beta Select */
+.charsheet .sheet-select-beta {
+    width: 99%;
+}
+
+/* Buttons Buttons Buttons */
+.charsheet button[type=roll].sheet-stat-roll {
+    background: transparent;
+    color: #000000;
+    font-size: 1em;
+    line-height: 18px;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 1px;
+    margin: 0px 0px 0px 0px;
+    width: 36px;
+    height: 18px;
+    font-weight: normal;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.charsheet button[type=roll].sheet-info-roll {
+    background: transparent;
+    color: #000000;
+    font-size: 18px;
+    line-height: 18px;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 1px;
+    margin: 0px 0px 0px 0px;
+    width: 20px;
+    height: 20px;
+    font-weight: normal;
+    border: 1px solid transparent;
+    font-family: "pictos";
+}
+
+.charsheet button[type=roll].sheet-stat-roll::before, button[type=roll].sheet-info-roll::before {
+    content: "" !important;
+}
+
+button[type=roll].sheet-stat-roll:hover, button[type=roll].sheet-info-roll:hover,
+button[type=roll].sheet-stat-roll:hover *, button[type=roll].sheet-info-roll:hover *,
+button[type=roll].sheet-stat-roll:hover input[type=text], button[type=roll].sheet-info-roll:hover input[type=text],
+button[type=roll].sheet-stat-roll:hover *, button[type=roll].sheet-info-roll:hover * {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+button[type=roll] * {
+    pointer-events: none;
+}
+
+/* Show / Hide Editing Container Styling */
+.charsheet .sheet-container-zeta {
+    display:none;
+}
+
+input.sheet-display-zeta:checked ~ div.sheet-container-zeta,
+input.sheet-display-omega:checked ~ div.sheet-container-zeta,
+input.sheet-display-hidden-zeta:checked ~ div.sheet-container-zeta {
+    display: block;
+}
+
+.charsheet input.sheet-display-zeta {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: 0px;
+    margin: 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.charsheet input.sheet-display-zeta::before {
+    content: attr(title);
+    border: solid 2px rgba(259, 259, 259, 1);
+    border-radius: 0px;
+    text-align: center;
+    display: inline-block;
+    color: rgba(102, 102, 102, 0.75);
+    background: rgba(259, 259, 259, 1);
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    font-family: Pictos;
+}
+
+.charsheet input.sheet-display-zeta:checked::before {
+    color: #4d0000;
+    background: rgb(259, 259, 259);
+}
+
+.charsheet .sheet-container-orange {
+    background: linear-gradient(to bottom right, rgba(153, 0, 0, 0.5), white );
+}
+
+.charsheet input.sheet-display-psi {
+    top: -1px;
+    left: -2px;
+}
+
+/* Omega the zeta alternate Checkbox */
+.charsheet input.sheet-display-omega {
+    width: 100%;
+    height: 0px;
+    position: relative;
+    top: -13px;
+    left: 0px;
+    margin: 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.charsheet input.sheet-display-omega::before {
+    content: attr(title);
+    border: solid 2px hsl(0, 0%, 95%);
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    color: rgba(102, 102, 102, 0.75);
+    background: hsl(0, 0%, 95%);
+    width: 100%;
+    height: 12px;
+    font-size: 10px;
+}
+
+.charsheet input.sheet-display-omega:checked::before {
+    color: rgb(259, 259, 259);
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: solid 2px transparent;
+    border-radius: 5px;
+}
+
+.charsheet input.sheet-omega-width-adjust {
+    width: 90%;
+}
+
+.charsheet input.sheet-omega-width-adjust::before {
+    width: 90%;
+}
+
+.charsheet input.sheet-omega-width-adjust:checked::before {
+    width: 90%;
+}
+
+/* Drive Points Checkboxes */
+.charsheet input.sheet-drive-checkbox {
+    width: 16%;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: 0px;
+    margin: -1.5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.charsheet input.sheet-drive-checkbox + span::before {
+    content: attr(title);
+    color: black;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: black;
+    background: linear-gradient(to bottom, #dcdcdc, #ffffff);
+    width: 16%;
+    height: 20px;
+    font-size: 16px;
+    margin-left: -16%;
+    margin-right: 2px;
+    padding: 0px 0px 0px 0px;
+}
+
+.charsheet input.sheet-drive-checkbox:checked + span::before {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: solid 1px #4d0000;
+    border-radius: 5px;
+}
+
+.charsheet input.sheet-drive-tap:checked::before {
+    color: rgb(259, 259, 259);
+    background: #ffa500;
+    background-image: linear-gradient(to bottom right, #ffa500, #cc0000);
+}
+
+/* Textarea Alpha Styling */
+.charsheet .sheet-textarea-alpha {
+    width: 97%;
+    height: auto;
+    resize: vertical;
+    min-height: 2em;
+    margin: 0px;
+}
+
+.charsheet .repcontrol {
+    min-height: 27px;
+}
+
+.charsheet .repcontrol .btn {
+    visibility: hidden;
+    border: medium none;
+    color: #fff !important;
+    background: none;
+    box-shadow: none;
+}
+
+.charsheet .repcontrol .btn:focus {
+    outline: 0;
+}
+
+.charsheet .repcontrol .repcontrol_edit:after {
+    content: '_';
+    visibility: visible;
+    font-family: pictos;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    padding: 2px 4px 2px 4px;
+    color: black;
+}
+
+.charsheet .editmode ~ .repcontrol .repcontrol_edit:after {
+    content: '3';
+}
+
+.charsheet .repcontrol .repcontrol_add:before {
+    content: '&';
+    visibility: visible;
+    font-family: pictos;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+    padding: 2px 4px 2px 4px;
+    color: black;
+}
+
+.charsheet .repcontrol .repcontrol_edit:hover:after,
+.charsheet .repcontrol .repcontrol_add:hover:before {
+    background-color: #EFEFEF;
+}
+
+.charsheet .sheet-resources .repcontrol {
+    margin-top: -10px;
+}
+
+.charsheet .itemcontrol {
+    z-index: 10;
+}
+
+.charsheet .itemcontrol .repcontrol_del {
+    font-size: 10px;
+    margin-top: 3px;
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+
+.charsheet .itemcontrol .repcontrol_move {
+    font-size: 10px;
+    margin-top: 3px;
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+
+/********** Switching Containers **********/
+.sheet-passion-container,
+.sheet-passion-switch:checked ~ .sheet-modifiers-container {
+  display: block;
+}
+
+.sheet-modifiers-container,
+.sheet-passion-switch:checked ~ .sheet-passion-container {
+  display: none;
+}
+
+.charsheet input.sheet-passion-switch {
+    width: 25%;
+    height: 12px;
+    position: relative;
+    top: -25px;
+    left: 75%;
+    margin: -1.5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.charsheet input.sheet-passion-switch + span::before {
+    content: attr(title);
+    color: black;
+    border: solid 1px #f8f8ff;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: #f8f8ff;
+    width: 25%;
+    height: 12px;
+    font-size: 10px;
+    margin-left: -25%;
+    margin-top: -23px;
+    margin-right: 2px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+.charsheet input.sheet-passion-switch:checked + span::before {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: solid 1px #4d0000;
+    border-radius: 5px;
+}
+
+.sheet-passion-container, {
+    margin-top: -20px;
+}
+
+.sheet-modifiers-container {
+    margin-top: -20px;
+}
+
+/* Red Header */
+.charsheet .sheet-red-header {
+    color: white;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    text-align: center;
+    font-weight: bold;
+}
+
+/********* Roll Modifier Radio/Checkbox Button Styling *********/
+input.sheet-roll-modifier {
+    width: 99%;
+    height: 14px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: -1.5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+input.sheet-roll-modifier + span::before {
+    content: attr(title);
+    color: black;
+    border: solid 1px #f8f8ff;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: #f8f8ff;
+    width: 99%;
+    height: 14px;
+    font-size: 12px;
+    margin-left: -99%;
+    padding: 0px 0px 2px 0px;
+}
+
+input.sheet-roll-modifier:checked + span::before {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    border: solid 1px #4d0000;
+    border-radius: 5px;
+}
+
+input.sheet-roll-text {
+    width: 120px;
+    height: 18px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+/* ROLL TEMPLATE STYLING */
+
+.sheet-rolltemplate-darkmaster a[href^="~"] {
+    background-color: transparent;
+    padding: 0px;
+    color: black;
+    border: 0px;
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-darkmaster a:hover {
+    color: #EC2127;
+}
+
+.sheet-rolltemplate-darkmaster a[href^="~"]:visited {
+    pointer-events: none;
+}
+
+.sheet-rolltemplate-darkmaster {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-wrap {
+    background-color: #f1f1f1;
+    border: 1px solid #d9d9d9; /* 2 shades up from #f1f1f1 */
+    border-radius: 5px;
+    width: 100%;
+    margin-left: -10px;
+    padding: 5px;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-background {
+    /*background-image: linear-gradient(to bottom left, black, gray, transparent);
+    border: 2px solid black;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 5px;*/
+    padding: 3px;
+    background-image: url("https://github.com/nogileyelsew/Against_The_Darkmaster/blob/master/Gandrell-Windblade-Fade.png?raw=true");+
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    /*background-position: center center;*/
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-header {
+    /*background-color: rgba(240, 255, 255, 0.25);
+    border: 1px solid rgba(240, 255, 255, 0.25);
+    border-radius: 5px;*/
+    font-weight: bold;
+    font-size: 1.35em;
+    margin: 2px;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-subheader {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 2px;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-justify {
+    text-align: justify;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-italic {
+    font-style: italic;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-bold {
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-darkmaster .sheet-template-hr {
+    border-top: 1px solid #000000;
+    margin: 2px;
+}
+
+.sheet-rolltemplate-darkmaster .inlinerollresult  {
+    background-color: transparent;
+    border: none;
+}
+ 
+.sheet-rolltemplate-darkmaster .inlinerollresult.fullcrit {
+    color: #3FB315;
+    border: none;
+}
+ 
+.sheet-rolltemplate-darkmaster .inlinerollresult.fullfail {
+	color: #B31515;
+    border: none;
+}
+ 
+.sheet-rolltemplate-darkmaster .inlinerollresult.importantroll {
+	color: #4A57ED;
+    border: none;
+}
