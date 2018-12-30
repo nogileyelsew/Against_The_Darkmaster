@@ -2598,20 +2598,800 @@
                         </div>
                     </div>
                 </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_two" value="" class="grimoire-title" title="@{grimoire_two}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-two">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-two_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-two_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-two_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-two_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-two_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-two_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-two_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-two_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-two_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-two_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-two_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-two_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-two_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-two_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-two_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-two_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-two_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-two_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-two_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-two_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_three" value="" class="grimoire-title" title="@{grimoire_three}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-three">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-three_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-three_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-three_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-three_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-three_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-three_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-three_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-three_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-three_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-three_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-three_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-three_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-three_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-three_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-three_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-three_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-three_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-three_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-three_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-three_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_four" value="" class="grimoire-title" title="@{grimoire_four}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-four">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-four_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-four_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-four_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-four_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-four_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-four_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-four_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-four_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-four_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-four_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-four_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-four_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-four_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-four_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-four_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-four_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-four_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-four_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-four_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-four_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_five" value="" class="grimoire-title" title="@{grimoire_five}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-five">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-five_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-five_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-five_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-five_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-five_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-five_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-five_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-five_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-five_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-five_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-five_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-five_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-five_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-five_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-five_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-five_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-five_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-five_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-five_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-five_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div><!-- END OF FIRST "COLUMN" -->
             <div class="grid-item"><!-- START OF SECOND "COLUMN" -->
                 <div class="black-header">
                     <h3 class="black-header-text" ><input type="text" name="attr_grimoire_six" value="" class="grimoire-title" title="@{grimoire_six}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
                 </div>
+                <fieldset class="repeating_grimoire-six">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-six_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-six_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-six_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-six_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-six_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-six_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-six_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-six_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-six_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-six_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-six_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-six_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-six_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-six_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-six_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-six_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-six_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-six_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-six_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-six_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_seven" value="" class="grimoire-title" title="@{grimoire_seven}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-seven">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-seven_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-seven_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-seven_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-seven_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-seven_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-seven_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-seven_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-seven_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-seven_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-seven_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-seven_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-seven_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-seven_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-seven_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-seven_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-seven_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-seven_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-seven_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-seven_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-seven_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_eight" value="" class="grimoire-title" title="@{grimoire_eight}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-eight">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-eight_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-eight_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-eight_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-eight_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-eight_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-eight_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-eight_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-eight_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-eight_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-eight_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-eight_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-eight_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-eight_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-eight_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-eight_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-eight_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-eight_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-eight_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-eight_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-eight_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_nine" value="" class="grimoire-title" title="@{grimoire_nine}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-nine">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-nine_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-nine_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-nine_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-nine_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-nine_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-nine_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-nine_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-nine_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-nine_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-nine_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-nine_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-nine_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-nine_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-nine_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-nine_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-nine_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-nine_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-nine_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-nine_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-nine_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+				<div class="black-header">
+                    <h3 class="black-header-text" ><input type="text" name="attr_grimoire_ten" value="" class="grimoire-title" title="@{grimoire_ten}" spellcheck="false" placeholder="Blank Grimoire" /></h3>
+                </div>
+                <fieldset class="repeating_grimoire-ten">
+                    <div class="grid-container grid-container-grimoire">
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The Weave is the Level of the Spell in each Spell Lore.">Weave</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The name of the Spell.">Spell</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The range of the Spell.">Range</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The area of effect decribes how much area will be affected by the casting of the Spell.">Area of Effect</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="The duration of the Spell.">Duration</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span class="header-label" title="Describes whether or not the spell grants a save versus it's effects.">Save</span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_weave" class="little-smaller" title="@{repeating_grimoire-ten_$X_weave}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_spell" value="" class="little-smaller" title="@{repeating_grimoire-ten_$X_spell}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_range" value="" class="little-smaller" title="@{repeating_grimoire-ten_$X_range}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_area_of_effect" value="" class="little-smaller" title="@{repeating_grimoire-ten_$X_area_of_effect}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_duration" value="" class="little-smaller" title="@{repeating_grimoire-ten_$X_duration}" ></span>
+                        </div>
+                        <div class="grid-item grid-item-center">
+                            <span name="attr_save" class="little-smaller" title="@{repeating_grimoire-ten_$X_save}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_description" class="little-smaller" title="@{repeating_grimoire-ten_$X_description}" ></span>
+                        </div>
+                        <div class="grid-item grimoire-span-six">
+                            <span name="attr_warp_option_one" class="little-smaller" title="@{repeating_grimoire-ten_$X_warp_option_one}" ></span><br>
+                            <span name="attr_warp_option_two" class="little-smaller" title="@{repeating_grimoire-ten_$X_warp_option_two}"></span><br>
+                            <span name="attr_warp_option_three" class="little-smaller" title="@{repeating_grimoire-ten_$X_warp_option_three}"></span>
+                        </div>
+                    </div>
+                    <button type="roll" class="info-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{spell} }} {{weapon-stats-one=Weave: **@{weave}** &nbsp; Range: **@{range}** }} {{weapon-stats-two=Area of Effect: **@{area_of_effect}** &nbsp; Duration: **@{duration}** }} {{spell-description=@{description} }} {{warp-option-one=@{warp_option_one} }} {{warp-option-two=@{warp_option_two} }} {{warp-option-three=@{warp_option_three} }}"/><span>w</span></button>
+                    <input type="checkbox" value="1" class="display-omega omega-width-adjust" title="Input Spell / Weave" />
+                    <div class="container-zeta">
+                        <div class="grid-container grid-container-grimoire">
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_weave" value="" class="header-input" title="@{repeating_grimoire-ten_$X_weave}" spellcheck="false" placeholder="1st" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_spell" value="" class="header-input" title="@{repeating_grimoire-ten_$X_spell}" spellcheck="false" placeholder="Heal" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_range" value="" class="header-input" title="@{repeating_grimoire-ten_$X_range}" spellcheck="false" placeholder="Touch" />
+                            </div>
+                            <div class="grid-item grimoire-span-left-two">
+                                <input type="text" name="attr_area_of_effect" value="" class="header-input" title="@{repeating_grimoire-ten_$X_area_of_effect}" spellcheck="false" placeholder="1 Target" />
+                            </div>
+                            <div class="grid-item grimoire-span-center-two">
+                                <input type="text" name="attr_duration" value="" class="header-input" title="@{repeating_grimoire-ten_$X_duration}" spellcheck="false" placeholder="Permanent" />
+                            </div>
+                            <div class="grid-item grimoire-span-right-two">
+                                <input type="text" name="attr_save" value="" class="header-input" title="@{repeating_grimoire-ten_$X_save}" spellcheck="false" placeholder="No" />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_description" value="" class="header-input" title="@{repeating_grimoire-ten_$X_description}" spellcheck="false" placeholder="Target living creature recovers up to 10% of their Total Hit Points over the course of the next minute, as if they rested for a full hour." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_one" value="" class="header-input" title="@{repeating_grimoire-ten_$X_warp_option_one}" spellcheck="false" placeholder="+1 Weave: increase amount of HPs recovered by another 10% and the recovery time by another minute." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_two" value="" class="header-input" title="@{repeating_grimoire-ten_$X_warp_option_two}" spellcheck="false" placeholder="+2 Weave: HPs recover is instantaneous instead." />
+                            </div>
+                            <div class="grid-item grimoire-span-six">
+                                <input type="text" name="attr_warp_option_three" value="" class="header-input" title="@{repeating_grimoire-ten_$X_warp_option_three}" spellcheck="false" placeholder="None." />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div><!-- END OF SECOND "COLUMN" -->
         </div>
     </div>
     <!--Tab 4 (Tables) -->
     <div class="tab-content tab4" >
         <!-- BEGIN OF 2 COLUMNS ON THIS TAB -->
-        <div class="grid-container grid-container-two-columns">
+        <div class="grid-container grid-container-two">
             <!-- GRID ITEM LEFT COLUMN -->
-            <div class="grid-item grid-two-column-left">
+            <div class="grid-item">
                 <div class="grid-container grid-container-beta">
                     <!-- GRID ITEM 401 -->
                     <div class="grid-item grid-beta-item beta-item401 black-header">
@@ -2784,7 +3564,7 @@
                 </div>
             </div>
             <!-- GRID ITEM RIGHT COLUMN -->
-            <div class="grid-item grid-two-column-right">
+            <div class="grid-item">
                 <div class="grid-container grid-container-beta">
                     <!-- GRID ITEM 401 -->
                     <div class="grid-item grid-beta-item beta-item401 black-header">
@@ -2832,7 +3612,7 @@
     </div>
 	<div>
 		<div class="black-header">
-            <h3 class="black-header-text" >Against the Darkmaster Character Sheet Version: 1.18.1227</h3>
+            <h3 class="black-header-text" >Against the Darkmaster Character Sheet Version: 1.18.1230.1330</h3>
         </div>
 		<input type="hidden" name="attr_reroll_success_spell" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Spell Lore }} {{modifier=Previous Total of:: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-roll=Result of: [[ 1d100cs>96cf<5 + ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_spell) }}" />
 		<input type="hidden" name="attr_reroll_failure_spell" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Spell Lore }} {{modifier=Previous Total of: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-roll=Result of: [[ ?{Previous Roll Total|0} [ Previous Roll ] - 1d100cs>96cf<5 ]] }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_spell) }}" />
@@ -3117,9 +3897,9 @@
             {{/rollthirty}}
             </div>
             <hr class="template-hr">
-            {{#allprops() character-name roll-name ability-name ability-scores ability-description weapon-stats-one weapon-stats-two modifier skill-roll open-roll open-ended-roll open-ended-success open-ended-failure hiddenroll rollone rolltwo rollthree rollfour rollfive rollsix rollseven rolleight rollnine rollten rolleleven rolltwelve rollthirteen rollfourteen rollfifteen rollsixteen rollseventeen rolleighteen rollnineteen rolltwenty rolltwentyone rolltwentytwo rolltwentythree rolltwentyfour rolltwentyfive rolltwentysix rolltwentyseven rolltwentyeight rolltwentynine rollthirty}}
+            {{#allprops() character-name roll-name ability-name ability-scores ability-description weapon-stats-one weapon-stats-two spell-description warp-option-one warp-option-two warp-option-three modifier skill-roll open-roll open-ended-roll open-ended-success open-ended-failure hiddenroll rollone rolltwo rollthree rollfour rollfive rollsix rollseven rolleight rollnine rollten rolleleven rolltwelve rollthirteen rollfourteen rollfifteen rollsixteen rollseventeen rolleighteen rollnineteen rolltwenty rolltwentyone rolltwentytwo rolltwentythree rolltwentyfour rolltwentyfive rolltwentysix rolltwentyseven rolltwentyeight rolltwentynine rollthirty}}
                 {{key}} {{value}}
-            {{/allprops() character-name roll-name ability-name ability-scores ability-description weapon-stats-one weapon-stats-two modifier skill-roll open-roll open-ended-roll open-ended-success open-ended-failure hiddenroll rollone rolltwo rollthree rollfour rollfive rollsix rollseven rolleight rollnine rollten rolleleven rolltwelve rollthirteen rollfourteen rollfifteen rollsixteen rollseventeen rolleighteen rollnineteen rolltwenty rolltwentyone rolltwentytwo rolltwentythree rolltwentyfour rolltwentyfive rolltwentysix rolltwentyseven rolltwentyeight rolltwentynine rollthirty }}
+            {{/allprops() character-name roll-name ability-name ability-scores ability-description weapon-stats-one weapon-stats-two spell-description warp-option-one warp-option-two warp-option-three modifier skill-roll open-roll open-ended-roll open-ended-success open-ended-failure hiddenroll rollone rolltwo rollthree rollfour rollfive rollsix rollseven rolleight rollnine rollten rolleleven rolltwelve rollthirteen rollfourteen rollfifteen rollsixteen rollseventeen rolleighteen rollnineteen rolltwenty rolltwentyone rolltwentytwo rolltwentythree rolltwentyfour rolltwentyfive rolltwentysix rolltwentyseven rolltwentyeight rolltwentynine rollthirty }}
         </div>
     </div>
 </rolltemplate>
