@@ -658,11 +658,11 @@
                     </div>
                     <!-- GRID ITEM 29 -->
                     <div class="grid-item grid-gamma-item gamma-item29">
-                        <span>Blades </span><span class="text-italic">(BRN*)</span>
+                        <span>Blades </span><span class="text-italic">(<span name="attr_selected_blades_stat"></span>*)</span>
                     </div>
                     <!-- GRID ITEM 30 -->
                     <div class="grid-item grid-gamma-item gamma-item30">
-                        <span name="attr_brawn"></span>
+                        <span name="attr_selected_blades_stat_value"></span>
                     </div>
                     <!-- GRID ITEM 31 -->
                     <div class="grid-item grid-gamma-item gamma-item31">
@@ -688,7 +688,7 @@
                     <!-- GRID ITEM 36 -->
                     <div class="grid-item grid-gamma-item gamma-item36">
                         <input type="hidden" name="attr_blades" value="0" readonly="true" />
-                        <button type="roll" class="stat-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Blades}} {{modifier=Rolling with a Modifier of: [[ @{brawn} [ Brawn ] + @{blades_rank} [ Blades Rank ] + @{blades_vocation_bonus} [ Blades Vocation Bonus ] + @{blades_item_bonus} [ Blades Item Bonus ] + @{blades_special_bonus} [ Blades Special Bonus ] + @{skill_help} [ Skill Assist Bonus ] - @{skill_difficulty} [ Skill Difficulty Modifier ] ]] }} {{skill-roll=Result of: [[ 1d100cs>96cf<5 + [[ @{blades} + @{skill_help} - @{skill_difficulty} ]] [ Total Modifier ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_blades) }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_blades) }}" name="blades" /><span name="attr_blades"></span></button>
+                        <button type="roll" class="stat-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Blades}} {{modifier=Rolling with a Modifier of: [[ @{selected_blades_stat_value} [ Brawn or Swiftness ] + @{blades_rank} [ Blades Rank ] + @{blades_vocation_bonus} [ Blades Vocation Bonus ] + @{blades_item_bonus} [ Blades Item Bonus ] + @{blades_special_bonus} [ Blades Special Bonus ] + @{skill_help} [ Skill Assist Bonus ] - @{skill_difficulty} [ Skill Difficulty Modifier ] ]] }} {{skill-roll=Result of: [[ 1d100cs>96cf<5 + [[ @{blades} + @{skill_help} - @{skill_difficulty} ]] [ Total Modifier ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_blades) }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_blades) }}" name="blades" /><span name="attr_blades"></span></button>
                         <input type="hidden" name="attr_reroll_success_blades" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Blades }} {{modifier=Previous Total of:: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{skill-roll=Result of: [[ 1d100cs>96cf<0 + ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_blades) }}" />
                         <input type="hidden" name="attr_reroll_failure_blades" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Blades }} {{modifier=Previous Total of: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{skill-roll=Result of: [[ ?{Previous Roll Total|0} [ Previous Roll ] - 1d100cs>96cf<0 ]] }} {{open-ended-failure=[Critical Success Roll Again](~failure_roll_blades) }}" />
                         <button type="roll" name="roll_success_roll_blades" style="display: none" value="@{reroll_success_blades}" class="btn ui-draggable"></button>
@@ -1482,7 +1482,7 @@
                     </div>
                     <!-- GRID ITEM 6 -->
                     <div class="grid-item">
-                        <span class="header-label" >Item</span>
+                        <span class="header-label" >Kin</span>
                     </div>
                     <!-- GRID ITEM 7 -->
                     <div class="grid-item">
@@ -1490,14 +1490,14 @@
                     </div>
                     <!-- GRID ITEM 8 -->
                     <div class="grid-item">
-                        <span class="header-label">Total</span>
+                        <span class="header-label" >Item</span>
                     </div>
                     <!-- GRID ITEM 9 -->
                     <div class="grid-item">
-                        &nbsp;
+                        <span class="header-label">Total</span>
                     </div>
                     <!-- GRID ITEM 10 -->
-                    <div class="grid-item spells-span-seven">
+                    <div class="grid-item spells-span-eight">
                         <span>Spells</span>
                         <span class="sub-header-right">DP:</span>
                     </div>
@@ -1505,55 +1505,54 @@
                     <div class="grid-item spells-grey">
                         <input type="text" name="attr_spell_lore_development_points" value="" class="header-input skill-adjust" title="@{spell_lore_development_points}" />
                     </div>
-                    <!-- GRID ITEM 12 -->
-                    <div class="grid-item">
-                        &nbsp;
-                    </div>
                 </div>
                 <fieldset class="repeating_spelllore">
                     <div>
                         <div class="grid-container grid-container-spells">
-                            <!-- GRID ITEM 13 -->
+                            <!-- GRID ITEM 12 -->
                             <div class="grid-item">
                                 <span name="attr_name"></span>
                             </div>
-                            <!-- GRID ITEM 14 -->
+                            <!-- GRID ITEM 13 -->
                             <div class="grid-item">
                                 <input type="hidden" name="attr_calculated_selected_stat" value="0" readonly="true" />
                                 <span name="attr_calculated_selected_stat"></span>
                             </div>
-                            <!-- GRID ITEM 15 -->
+                            <!-- GRID ITEM 14 -->
                             <div class="grid-item">
                                 <input type="text" name="attr_ranks" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_ranks}" />
                             </div>
-                            <!-- GRID ITEM 16 -->
+                            <!-- GRID ITEM 15 -->
                             <div class="grid-item">
 								<span name="attr_rank" title="@{repeating_spelllore_$0_rank}"></span>
                                 <input type="hidden" name="attr_rank" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_rank}" />
                             </div>
-                            <!-- GRID ITEM 17 -->
+                            <!-- GRID ITEM 16 -->
                             <div class="grid-item">
                                 <input type="text" name="attr_vocation_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_vocation_bonus}" />
                             </div>
+                            <!-- GRID ITEM 17 -->
+                            <div class="grid-item">
+                                <input type="text" name="attr_kin_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_kin_bonus}" />
+                            </div>
                             <!-- GRID ITEM 18 -->
                             <div class="grid-item">
-                                <input type="text" name="attr_item_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_item_bonus}" />
+                                <input type="text" name="attr_special_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_special_bonus}" />
                             </div>
                             <!-- GRID ITEM 19 -->
                             <div class="grid-item">
-                                <input type="text" name="attr_special_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_special_bonus}" />
+                                <input type="text" name="attr_item_bonus" value="0" class="header-input skill-adjust" title="@{repeating_spelllore_$0_item_bonus}" />
                             </div>
                             <!-- GRID ITEM 20 -->
                             <div class="grid-item">
                                 <input type="hidden" name="attr_spell" value="0" readonly="true" />
-								<button type="roll" class="stat-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{name} Lore}} {{modifier=Rolling with a Modifier of: [[ @{spell} [ @{selected_stat} @{calculated_selected_stat} + @{name} Lore Rank @{rank} + @{name} Lore Vocation Bonus @{vocation_bonus} + @{name} Lore Item Bonus @{item_bonus} + @{name} Lore Special Bonus @{special_bonus} ] ]] }} {{open-roll=Result of: [[ 1d100cs>96cf<5 + @{spell} [ Spell Lore Modifier ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_spell) }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_spell) }}" name="spell" /><span name="attr_spell"></span></button>
-                            </div>
-                            <div>
-                                <input type="checkbox" value="1" name="attr_details_setting" class="display-zeta" title="i"/><!-- Unchecked = Display None -->
+								<span name="attr_spell"></span>
                             </div>
                         </div>
+                        <button type="roll" class="spell-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{name} Lore}} {{modifier=Rolling with a Modifier of: [[ @{spell} [ @{selected_stat} @{calculated_selected_stat} + @{name} Lore Rank @{rank} + @{name} Lore Vocation Bonus @{vocation_bonus} + @{name} Lore Item Bonus @{item_bonus} + @{name} Lore Special Bonus @{special_bonus} ] ]] }} {{open-roll=Result of: [[ 1d100cs>96cf<5 + @{spell} [ Spell Lore Modifier ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_spell) }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_spell) }}" name="spell" /><span>Cast Spell</span></button>
+                        <button type="roll" class="spell-roll" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=@{name} Lore}} {{modifier=Rolling with a Modifier of: [[ @{spell} [ @{selected_stat} @{calculated_selected_stat} + @{name} Lore Rank @{rank} + @{name} Lore Vocation Bonus @{vocation_bonus} + @{name} Lore Item Bonus @{item_bonus} + @{name} Lore Special Bonus @{special_bonus} ] ]] }} {{open-roll=Result of: [[ 1d100cs>96cf<5 + @{spell} [ Spell Lore Modifier ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_spell) }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_spell) }}" name="spell" /><span>Spell Attack</span></button>
                         <!-- <input type="hidden" value="1" name="attr_details_toggle" class="display-hidden-zeta" /><!-- Unchecked = Display None -->
-                        <input type="checkbox" value="1" class="display-omega" title="More Info" />
+                        <input type="checkbox" value="1" class="display-omega omicron-adjust" title="Edit Spell" />
                         <div class="container-zeta">
                             <div class="grid-container grid-container-spells">
                                 <!-- GRID ITEM 21 -->
@@ -3612,7 +3611,7 @@
     </div>
 	<div>
 		<div class="black-header">
-            <h3 class="black-header-text" >Against the Darkmaster Character Sheet Version: 1.18.1230.1330</h3>
+            <h3 class="black-header-text" >Against the Darkmaster Character Sheet Version: 1.19.113</h3>
         </div>
 		<input type="hidden" name="attr_reroll_success_spell" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Spell Lore }} {{modifier=Previous Total of:: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-roll=Result of: [[ 1d100cs>96cf<5 + ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-ended-success=[Critical Success Roll Again](~success_roll_spell) }}" />
 		<input type="hidden" name="attr_reroll_failure_spell" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Spell Lore }} {{modifier=Previous Total of: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-roll=Result of: [[ ?{Previous Roll Total|0} [ Previous Roll ] - 1d100cs>96cf<5 ]] }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_spell) }}" />
@@ -3626,6 +3625,12 @@
 		<input type="hidden" name="attr_reroll_failure_weapon" value="&{template:darkmaster} {{character-name=@{character_name} }} {{roll-name=Failure Roll }} {{modifier=Previous Total of: [[ ?{Previous Roll Total|0} [ Previous Roll ] ]] }} {{open-roll=Result of: [[ ?{Previous Roll Total|0} [ Previous Roll ] - 1d100cs>96cf<5 ]] }} {{open-ended-failure=[Critical Failure Roll Again](~failure_roll_weapon) }}" />
         <button type="roll" name="roll_success_roll_weapon" style="display: none" value="@{reroll_success_weapon}" ></button>
 		<button type="roll" name="roll_failure_roll_weapon" style="display: none" value="@{reroll_failure_weapon}" ></button>
+		<span>Special Case Rules</span>
+		<select name="attr_selected_blades_stat" class="select-alpha select-beta" title="@{selected_blades_stat}"> 
+            <option value="BRN" selected="selected">Blades Skill Calculated with Brawn.</option>
+            <option value="SWI">Blades Skill Calculated with Swiftness.</option>
+        </select>
+        <input type="hidden" name="attr_selected_blades_stat_value" value="0" readonly="true" />
 	</div>
 </div>
 
@@ -4001,11 +4006,11 @@ on("change:blades_ranks", function() {
 	});
 });
 	
-on("sheet:opened change:blades_rank change:brawn change:blades_vocation_bonus change:blades_item_bonus change:blades_special_bonus ", function() {
-	getAttrs(["blades_rank", "brawn", "blades_vocation_bonus", "blades_item_bonus", "blades_special_bonus", "blades"], function(values) {
+on("sheet:opened change:blades_rank change:selected_blades_stat_value change:blades_vocation_bonus change:blades_item_bonus change:blades_special_bonus ", function() {
+	getAttrs(["blades_rank", "selected_blades_stat_value", "blades_vocation_bonus", "blades_item_bonus", "blades_special_bonus", "blades"], function(values) {
 	    console.log("%c| Against the Darkmaster Character Sheet Calculating Blades Combat Modifier |", "color:white; background-color: Orange");
 		setAttrs({
-			blades: SkillCalc(parseInt(values.brawn,10), parseInt(values.blades_rank,10), parseInt(values.blades_vocation_bonus,10), parseInt(values.blades_item_bonus,10), parseInt(values.blades_special_bonus,10) )
+			blades: SkillCalc(parseInt(values.selected_blades_stat_value,10), parseInt(values.blades_rank,10), parseInt(values.blades_vocation_bonus,10), parseInt(values.blades_item_bonus,10), parseInt(values.blades_special_bonus,10) )
 		});
 	});
 });
@@ -4701,6 +4706,27 @@ on("change:repeating_spelllore:details_setting", function () {
 	        repeating_spelllore_details_toggle: toggleChange
 	    });
     });
+});
+
+/*  Setup the Selected Stat Score for Blades Skill */	
+on("change:selected_blades_stat change:brawn change:swiftness", function() {
+	getAttrs(["brawn", "swiftness", "selected_blades_stat"], function(values) {
+	    console.log("%c| Against the Darkmaster Character Sheet Calculating Selected Stat for Blades Skill |", "color:white; background-color: Orange");
+		var selectedStat = 0;
+        switch (values.selected_blades_stat) {
+			case "BRN" :
+				selectedStat = parseInt(values.brawn,10);
+				console.log("Blades Skill Selected Stat: Brawn or " + parseInt(values.brawn,10) );
+				break;
+			case "SWI" :
+				selectedStat = parseInt(values.swiftness,10);
+				console.log("Blades Skill Selected Stat: Swiftness or " + parseInt(values.swiftness,10) );
+				break;
+		}
+		setAttrs({
+		    selected_blades_stat_value: selectedStat
+		});
+	});
 });
 
 </script>
